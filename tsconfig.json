@@ -1,0 +1,17 @@
+{
+  "extends": "@tsconfig/node16/tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist", //完成編譯後生成 js 文件的路徑
+    "rootDir": "./src", //代表 ts 文件的入口路徑
+    "target": "es5", //指定編譯生成的JS版本
+    "module": "commonjs", //指定生成哪種模組
+    "strict": true, //啟用所有嚴格類型檢查選項
+    "esModuleInterop": true, //兼容模組導入的方式
+    "skipLibCheck": true, // 不會檢查引入的函式庫檔案
+    "forceConsistentCasingInFileNames": true, //確保檔案的大小寫一致
+    "moduleResolution": "node", // 選擇模組解析策略： 'node' (Node.js) or 'classic' (TypeScript pre-1.6)
+    "noFallthroughCasesInSwitch": true // 報告 switch 語句的 fallthrough 錯誤。 （即，不允許 switch 的 case 語句貫穿）
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"]
+}
